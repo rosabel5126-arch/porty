@@ -25,6 +25,19 @@
             border-radius: 8px;
         }
 
+        h1 {
+            text-align: center;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 1.5em;
+            font-size: 14px;
+        }
+
         .canva-container {
             position: relative;
             width: 100%;
@@ -40,6 +53,7 @@
             overflow: hidden;
             border-radius: 8px;
             will-change: transform;
+            background-color: #f0f0f0;
         }
 
         .canva-container iframe {
@@ -51,6 +65,38 @@
             border: none;
             padding: 0;
             margin: 0;
+            pointer-events: none;
+        }
+
+        .design-info {
+            text-align: center;
+            margin: 1.5em 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #0066cc;
+        }
+
+        .design-info p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 0.5em;
+        }
+
+        .canva-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .canva-link:hover {
+            background-color: #0052a3;
         }
 
         .download-section {
@@ -61,20 +107,26 @@
             border-radius: 8px;
         }
 
+        .download-section h2 {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
         .download-link {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #0066cc;
+            background-color: #28a745;
             color: white;
             text-decoration: none;
             border-radius: 6px;
             font-weight: 600;
             transition: background-color 0.3s ease;
             margin: 8px;
+            cursor: pointer;
         }
 
         .download-link:hover {
-            background-color: #0052a3;
+            background-color: #218838;
         }
 
         .credit {
@@ -100,11 +152,19 @@
                 width: 100%;
                 margin: 10px 0;
             }
+
+            .canva-link {
+                display: block;
+                margin-top: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <h1>📊 Rosabel's Portfolio</h1>
+        <p class="subtitle">Designed with Canva</p>
+
         <div class="canva-container">
             <iframe loading="lazy"
                 src="https://www.canva.com/design/DAHJ6EmTCRk/OpgqA1CgXfogWfJrqabdCQ/view?embed" 
@@ -113,8 +173,13 @@
             </iframe>
         </div>
 
+        <div class="design-info">
+            <p>💡 View the full design on Canva:</p>
+            <a href="https://www.canva.com/design/DAHJ6EmTCRk/OpgqA1CgXfogWfJrqabdCQ/view" target="_blank" rel="noopener noreferrer" class="canva-link">Open in Canva →</a>
+        </div>
+
         <div class="download-section">
-            <h2>Download Portfolio</h2>
+            <h2>📥 Download Documents</h2>
             <a href="assets/portfolio.pdf" download class="download-link">📄 Download Portfolio (PDF)</a>
             <a href="assets/resume.pdf" download class="download-link">📋 Download Resume (PDF)</a>
             <p class="credit">Portfolio by Rosabel Tomikeimieye</p>
