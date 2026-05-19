@@ -21,95 +21,123 @@
             max-width: 1000px;
             margin: 0 auto;
             background-color: white;
-            padding: 20px;
+            padding: 40px 20px;
             border-radius: 8px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3em;
         }
 
         h1 {
-            text-align: center;
-            margin-bottom: 0.5em;
+            font-size: 2.5em;
             color: #333;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 1.5em;
-            font-size: 14px;
-        }
-
-        .canva-container {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            height: 0;
-            padding-top: 56.2225%;
-            padding-bottom: 0;
-            box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16);
-            margin-top: 1.6em;
-            margin-bottom: 0.9em;
-            margin-left: auto;
-            margin-right: auto;
-            overflow: hidden;
-            border-radius: 8px;
-            will-change: transform;
-            background-color: #f0f0f0;
-        }
-
-        .canva-container iframe {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            border: none;
-            padding: 0;
-            margin: 0;
-            pointer-events: none;
-        }
-
-        .design-info {
-            text-align: center;
-            margin: 1.5em 0;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            border-left: 4px solid #0066cc;
-        }
-
-        .design-info p {
-            color: #666;
-            font-size: 14px;
             margin-bottom: 0.5em;
         }
 
-        .canva-link {
+        .tagline {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 2em;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 2em;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero-section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 2em 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
             display: inline-block;
-            padding: 8px 16px;
+            padding: 12px 24px;
             background-color: #0066cc;
             color: white;
             text-decoration: none;
             border-radius: 6px;
             font-weight: 600;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .canva-link:hover {
+        .nav-link:hover {
             background-color: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+        }
+
+        .nav-link.secondary {
+            background-color: #28a745;
+        }
+
+        .nav-link.secondary:hover {
+            background-color: #218838;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 3em 0;
+        }
+
+        .feature-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0066cc;
+        }
+
+        .feature-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
         }
 
         .download-section {
             text-align: center;
-            margin-top: 2em;
-            padding: 20px;
-            background-color: #f9f9f9;
+            margin-top: 3em;
+            padding: 30px;
+            background-color: #f0f0f0;
             border-radius: 8px;
         }
 
         .download-section h2 {
-            margin-bottom: 1em;
+            margin-bottom: 1.5em;
             color: #333;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .download-link {
@@ -120,69 +148,98 @@
             text-decoration: none;
             border-radius: 6px;
             font-weight: 600;
-            transition: background-color 0.3s ease;
-            margin: 8px;
-            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .download-link:hover {
             background-color: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
         }
 
-        .credit {
+        .footer {
             text-align: center;
-            font-size: 14px;
+            margin-top: 3em;
+            padding-top: 2em;
+            border-top: 1px solid #eee;
             color: #666;
-            margin-top: 1em;
+            font-size: 14px;
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 15px;
+                padding: 20px;
             }
 
-            .canva-container {
-                max-width: 100% !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
+            h1 {
+                font-size: 1.8em;
             }
 
+            .hero-section {
+                padding: 20px;
+            }
+
+            .hero-section h2 {
+                font-size: 1.4em;
+            }
+
+            .navigation,
+            .download-buttons {
+                flex-direction: column;
+            }
+
+            .nav-link,
             .download-link {
-                display: block;
                 width: 100%;
-                margin: 10px 0;
-            }
-
-            .canva-link {
-                display: block;
-                margin-top: 10px;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📊 Rosabel's Portfolio</h1>
-        <p class="subtitle">Designed with Canva</p>
-
-        <div class="canva-container">
-            <iframe loading="lazy"
-                src="https://www.canva.com/design/DAHJ6EmTCRk/OpgqA1CgXfogWfJrqabdCQ/view?embed" 
-                allowfullscreen="allowfullscreen" 
-                allow="fullscreen">
-            </iframe>
+        <div class="header">
+            <h1>📊 Rosabel's Portfolio</h1>
+            <p class="tagline">Welcome to my professional portfolio</p>
         </div>
 
-        <div class="design-info">
-            <p>💡 View the full design on Canva:</p>
-            <a href="https://www.canva.com/design/DAHJ6EmTCRk/OpgqA1CgXfogWfJrqabdCQ/view" target="_blank" rel="noopener noreferrer" class="canva-link">Open in Canva →</a>
+        <div class="hero-section">
+            <h2>About Me</h2>
+            <p>Explore my work, skills, and experience. View my complete portfolio and resume below.</p>
         </div>
 
-        <div class="download-section">
-            <h2>📥 Download Documents</h2>
-            <a href="assets/portfolio.pdf" download class="download-link">📄 Download Portfolio (PDF)</a>
-            <a href="assets/resume.pdf" download class="download-link">📋 Download Resume (PDF)</a>
-            <p class="credit">Portfolio by Rosabel Tomikeimieye</p>
+        <div class="features">
+            <div class="feature-card">
+                <h3>📚 Articles & Documents</h3>
+                <p>Browse my collection of articles, case studies, and professional documents all in one place.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📥 Quick Downloads</h3>
+                <p>Download my portfolio and resume directly. No redirects, just pure content.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🚀 Always Updated</h3>
+                <p>My portfolio is regularly updated with new projects and achievements.</p>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="articles.html" class="nav-link">📚 View Articles & Documents</a>
+            <a href="#download" class="nav-link secondary">📥 Download Documents</a>
+        </div>
+
+        <div class="download-section" id="download">
+            <h2>📥 Download My Documents</h2>
+            <p style="color: #666; margin-bottom: 1.5em;">Get my portfolio and resume in PDF format</p>
+            <div class="download-buttons">
+                <a href="assets/portfolio.pdf" download class="download-link">📄 Download Portfolio</a>
+                <a href="assets/resume.pdf" download class="download-link">📋 Download Resume</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Portfolio by Rosabel Tomikeimieye</p>
+            <p style="margin-top: 0.5em;">© 2026 All rights reserved</p>
         </div>
     </div>
 </body>
